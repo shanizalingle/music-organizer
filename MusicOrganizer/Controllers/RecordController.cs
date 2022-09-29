@@ -16,7 +16,7 @@ namespace MusicOrganizer.Controllers
     [HttpGet("/artists/{artistId}/records/{recordId}")]
     public ActionResult Show(int artistId, int recordId)
     {
-      Record record = Record.Find(recordId + 1);
+      Record record = Record.Find(recordId);
       Artist artist = Artist.Find(artistId);
       Dictionary<string, object> model = new Dictionary<string, object>();
       model.Add("record", record);
