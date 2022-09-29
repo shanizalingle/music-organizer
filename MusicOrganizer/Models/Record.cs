@@ -5,7 +5,7 @@ namespace MusicOrganizer.Models
   public class Record
   {
     public string RecordTitle { get; set; }
-    public string ArtistName{ get; set; }
+    //public string ArtistName{ get; set; }
     public int Id { get; }
 
     private static List<Record> _records = new List<Record> {};
@@ -13,7 +13,7 @@ namespace MusicOrganizer.Models
     public Record(string recordTitle, string artistName)
     {
       RecordTitle = recordTitle;
-      ArtistName = artistName;
+      //ArtistName = artistName;
       Id = _records.Count;
       _records.Add(this);
     }
