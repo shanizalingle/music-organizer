@@ -24,11 +24,18 @@ namespace MusicOrganizer.Controllers
       return View(model);
     }
 
-    [HttpPost("/records/delete")]
-    public ActionResult DeleteAll()
+    [HttpPost("/artists/{artistId}/records/delete")]
+    public ActionResult DeleteAll(int artistId)
     {
       Record.ClearAll();
       return View();
+    }
+    
+    [HttpGet("/records")]
+    public ActionResult Index()
+    {
+      List<Record> allRecords = Record.GetAll();
+      return View(allRecords);
     }
   }
 }
