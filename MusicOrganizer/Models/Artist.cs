@@ -30,7 +30,7 @@ namespace MusicOrganizer.Models
     }
     public void AddRecord(Record record)
     {
-      Record.Add(record);
+      Records.Add(record);
     }
   }
 }

@@ -5,15 +5,13 @@ namespace MusicOrganizer.Models
   public class Record
   {
     public string RecordTitle { get; set; }
-    //public string ArtistName{ get; set; }
     public int Id { get; }
 
     private static List<Record> _records = new List<Record> {};
 
-    public Record(string recordTitle, string artistName)
+    public Record(string recordTitle)
     {
       RecordTitle = recordTitle;
-      //ArtistName = artistName;
       Id = _records.Count;
       _records.Add(this);
     }

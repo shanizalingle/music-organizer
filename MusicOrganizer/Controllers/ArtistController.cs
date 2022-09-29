@@ -5,7 +5,7 @@ using MusicOrganizer.Models;
 
 namespace MusicOrganizer.Controllers
 {
-  public class ArtistsController : Controllers 
+  public class ArtistsController : Controller 
   {
     [HttpGet("/artists")]
     public ActionResult Index()

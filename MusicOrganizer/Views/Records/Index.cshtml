@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My To-Do List!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    @using MusicOrganizer.Models;
+
+    <h1>To Do List</h1>
+    @if (Model.Count == 0)
+    {
+      <p>There are no records in the list.</p>
+    }
+    <ul>
+      @foreach (Record record in Model)
+      {
+        <li><a href='/records/@record.Id'>@record.RecordTitle</a></li>
+      }
+    </ul>
+
+    <a href="/records/new">Add a new record.</a>
+
+    <form action="/records/delete" method="post">
+      <button type="submit" name="button">Clear All records</button>
+    </form>
+  </body>
+</html>
