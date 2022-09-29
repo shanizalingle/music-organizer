@@ -26,7 +26,7 @@ namespace MusicOrganizer.Models
     }
     public static Artist Find(int searchId)
     {
-      return _artists[searchId];
+      return _artists[searchId-1];
     }
     public void AddRecord(Record record)
     {

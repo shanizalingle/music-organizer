@@ -25,7 +25,7 @@ namespace MusicOrganizer.Models
     }
     public static Record Find(int searchId)
     {
-      return _records[searchId];
+      return _records[searchId-1];
     }
   }
 }
